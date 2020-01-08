@@ -1,0 +1,18 @@
+:root {
+    --bluel: #2DAAE1;
+    --blueh: #143C6D;
+    
+}
+body,h1,h2,h3,h4,h5 {
+    margin: 0;
+}
+h1,h2,h3,h4,h5 {
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Roboto';
+    font-weight: 600;
+
+}
