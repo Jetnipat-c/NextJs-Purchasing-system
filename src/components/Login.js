@@ -36,8 +36,14 @@ const LogIn = () => {
 
     const login = async () => {
         const res = await axios.post('/api/psu', { username, password });
-
         setLoginStatus(JSON.stringify(res.data))
+        console.log(res.data[1])
+        if(res.data[1]!='')
+        {
+            Router.push('/main')
+        }
+        else
+            setLoginStatus('Wrong password!!!')
     }
     return (
         
