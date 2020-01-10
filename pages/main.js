@@ -6,10 +6,7 @@ import Footer from '../src/components/Footer'
 import Header from '../src/components/Header'
 import Contents from '../src/components/Contents'
 const StyledWrapper = styled.div`
-.footerbox{
-    width:100%;
-    height: 100vh;
-}
+
 `
 const main = () => {
     return (
@@ -17,9 +14,7 @@ const main = () => {
             <Topbar />
             <Header />
             <Contents/>
-            <div className='footerboox'>
             <Footer />
-            </div>
         </StyledWrapper>
     )
 }

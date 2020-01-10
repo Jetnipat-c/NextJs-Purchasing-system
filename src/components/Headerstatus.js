@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Icon, Input, Button, Checkbox,Typography  } from 'antd';
 import 'antd/dist/antd.css'
 import React, { useState } from 'react';
+const { Text } = Typography;
 const StyledWrapper = styled.div`
     display:flex;
     align-items: flex-end;
@@ -9,7 +10,7 @@ const StyledWrapper = styled.div`
     background-color:white;
     //box-shadow: 0 4px 6px 0 rgba(0,0,0,.15);
     border-bottom: 1.5px solid #2DAAE1;
-    margin : 0 20px 0 20px;
+    margin : 0 50px 0 50px;
 
 h2 {
     margin: 0; 

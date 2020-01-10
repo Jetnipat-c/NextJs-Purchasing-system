@@ -1,7 +1,7 @@
 :root {
     --bluel: #2DAAE1;
     --blueh: #143C6D;
-    
+    flex-direction: column;
 }
 body,h1,h2,h3,h4,h5 {
     margin: 0;
