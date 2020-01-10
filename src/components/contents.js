@@ -2,6 +2,7 @@
 import styled from 'styled-components'
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import 'antd/dist/antd.css'
+import Router from 'next/router'
 const StyledWrapper = styled.div`
     display:flex;
     width:100%;
@@ -50,19 +51,19 @@ const Contents = () => {
     return (
         <StyledWrapper>
             <div className="box1" >
-                    <Icon style={{ fontSize: '100px', color: '#08c' }} type="form" />
+                    <Icon onClick={()=> Router.push('/purchasing001')} style={{ fontSize: '100px', color: '#08c' }} type="form" />
                 <h3>เพิ่มคำสั่งซื้อพัสดุแบบปกติ  001</h3>
                     <h4>- เพิ่มคำสั่งซื้อรายการพัสดุไม่เกิน 2 รายการ</h4>
                     <h4>- เพิ่มคำสั่งซื้อรายการพัสดุมากกว่า 2 รายการ</h4>
             </div>
             <div className="box2" >
-                <Icon style={{ fontSize: '100px', color: '#08c' }} type="form" />
+                <Icon onClick={()=> Router.push('/purchasing002')} style={{ fontSize: '100px', color: '#08c' }} type="snippets" />
                 <h3>เพิ่มคำสั่งซื้อพัสดุแบบเร่งด่วน  002</h3>
                     <h4>- เพิ่มคำสั่งซื้อรายการพัสดุไม่เกิน 2 รายการ</h4>
                     <h4>- เพิ่มคำสั่งซื้อรายการพัสดุมากกว่า 2 รายการ</h4>
             </div>
             <div className="box3" >
-                <Icon style={{ fontSize: '100px', color: '#08c' }} type="form" />
+                <Icon onClick={()=> Router.push('/profile')} style={{ fontSize: '100px', color: '#08c' }} type="user-add" />
                 <h3>จัดการข้อมูลส่วนตัว</h3>
                     <h4>- แก้ไขข้อมูลประวัติส่วนตัว</h4>
             </div>
