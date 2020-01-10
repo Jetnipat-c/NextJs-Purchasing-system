@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import 'antd/dist/antd.css'
+import React, { useState } from 'react';
 const StyledWrapper = styled.div`
     display:flex;
     align-items: flex-end;
@@ -13,10 +14,10 @@ h3 {
     padding : 0 0 0 80px;
 }
 `
-const Header = () => {
+const Header = props => {
     return (
         <StyledWrapper>
-               <h3>สวัสดี : user_name</h3>
+               <h3>สวัสดี :</h3>
         </StyledWrapper>
     )
 }

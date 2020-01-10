@@ -8,28 +8,64 @@ const StyledWrapper = styled.div`
     height:620px;
     background-color:black;
 .box1{
-    height:100%;
-    width:33.3%;
-    background-color:green;
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height:620px;
+    width: 570px;
+    background-color:white;
 }
 .box2{
+    display:flex;
+    flex-direction: column; 
+   justify-content: center;
+   align-items: center;
     height:100%;
-    width:33.3%;
-    background-color:blue;
+    width: 570px;
+    background-color:white;
 }
 .box3{
+    display:flex;
+    flex-direction: column; 
+   justify-content: center;
+   align-items: center;
     height:100%;
-    width:33.3%;
-    background-color:yellow;
+    width: 570px;
+    background-color:white;
+}
+h3 {
+    padding: 20px 0 0 0;
+    font-size: 30px;
+}
+h4 {
+    padding: 5px 0 0 0px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
 }
 `
 
 const Contents = () => {
     return (
         <StyledWrapper>
-                   <div className="box1" ></div>
-                   <div className="box2" ></div>
-                   <div className="box3" ></div>
+            <div className="box1" >
+                    <Icon style={{ fontSize: '100px', color: '#08c' }} type="form" />
+                <h3>เพิ่มคำสั่งซื้อพัสดุแบบปกติ  001</h3>
+                    <h4>- เพิ่มคำสั่งซื้อรายการพัสดุไม่เกิน 2 รายการ</h4>
+                    <h4>- เพิ่มคำสั่งซื้อรายการพัสดุมากกว่า 2 รายการ</h4>
+            </div>
+            <div className="box2" >
+                <Icon style={{ fontSize: '100px', color: '#08c' }} type="form" />
+                <h3>เพิ่มคำสั่งซื้อพัสดุแบบเร่งด่วน  002</h3>
+                    <h4>- เพิ่มคำสั่งซื้อรายการพัสดุไม่เกิน 2 รายการ</h4>
+                    <h4>- เพิ่มคำสั่งซื้อรายการพัสดุมากกว่า 2 รายการ</h4>
+            </div>
+            <div className="box3" >
+                <Icon style={{ fontSize: '100px', color: '#08c' }} type="form" />
+                <h3>จัดการข้อมูลส่วนตัว</h3>
+                    <h4>- แก้ไขข้อมูลประวัติส่วนตัว</h4>
+            </div>
         </StyledWrapper>
     )
 }
