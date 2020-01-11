@@ -5,7 +5,7 @@ import 'antd/dist/antd.css'
 import Router from 'next/router'
 const { Text } = Typography;
 const StyledWrapper = styled.div`
-    height:1500px;
+    height:100%;
     //background-color:#EAECEE;
     margin : 20px 50px 0 50px;
 .titlepage{
@@ -52,10 +52,24 @@ Input{
 .layout-table{
     display:flex;
 }
+.footerpage > div{
+    display:flex;
+    width:100%
+    justify-content:flex-end;
+    flex-direction: column;
+    background-color:red;
+    .table-footerpage{
+        display:flex;
+        justify-content:flex-end;
+    }
+}
+
 `
 
 const Contents = () => {
-
+    function onChange(e) {
+        console.log(`checked = ${e.target.checked}`);
+    }
     return (
         <StyledWrapper>
             <div className="titlepage">
@@ -90,20 +104,63 @@ const Contents = () => {
             </div>
             <div className="layout-table">
                 <div className="detail-table">
-                <div>
-                    <span>3.1</span><Input style={{ width: '200px' }} placeholder="" /><span>ประธานกรรมการ</span><br></br>
-                    <span>3.2</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span><br></br>
-                   <span>3.3</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span> <br></br>
+                    <div>
+                        <span>3.1</span><Input style={{ width: '200px' }} placeholder="" /><span>ประธานกรรมการ</span><br></br>
+                        <span>3.2</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span><br></br>
+                        <span>3.3</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span> <br></br>
+                    </div>
                 </div>
-            </div>
                 <div className="detail-table">
-                <div>
-                    <span>3.1</span><Input style={{ width: '200px' }} placeholder="" /><span>ประธานกรรมการ</span><br></br>
-                    <span>3.2</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span><br></br>
-                   <span>3.3</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span> <br></br>
+                    <div>
+                        <span>3.1</span><Input style={{ width: '200px' }} placeholder="" /><span>ประธานกรรมการ</span><br></br>
+                        <span>3.2</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span><br></br>
+                        <span>3.3</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span> <br></br>
+                    </div>
                 </div>
             </div>
+            <p style={{ fontSize: "30px", paddingTop: '15px' }}>4) แหล่งเงิน</p>
+            <Checkbox onChange={onChange}>เงินอุดหนุนจากรัฐบาล ปี</Checkbox>
+            <Input style={{ width: '200px' }} placeholder="" />
+            <Checkbox onChange={onChange}>เงินรายได้  ปี</Checkbox>
+            <Input style={{ width: '200px' }} placeholder="" />
+            <Checkbox onChange={onChange}>เงินรายได้สะสม ปี</Checkbox>
+            <Input style={{ width: '200px' }} placeholder="" />
+
+            <div>
+                <span style={{ paddingRight: '34px' }}>ทิศทาง</span>
+                <Input style={{ width: '200px' }} placeholder="" /><br></br>
+
+                <span style={{ paddingRight: '26px' }}>นโยบาย </span>
+                <Input style={{ width: '200px' }} placeholder="" /><br></br>
+
+                <span style={{ paddingRight: '29px' }}>แผนงาน</span>
+                <Input style={{ width: '200px' }} placeholder="" />
+                <span style={{ paddingRight: '35px' }}>งาน</span>
+                <Input style={{ width: '200px' }} placeholder="" /><br></br>
+
+                <span >หมวดรายจ่าย</span>
+                <Input style={{ width: '200px' }} placeholder="" />
+                <span >หมวดย่อย</span>
+                <Input style={{ width: '200px' }} placeholder="" /><br></br>
+
+                <span style={{ paddingRight: '15px' }}>ชื่อรายการ</span> <Input style={{ width: '200px' }} placeholder="" />
             </div>
+            <Checkbox onChange={onChange}>เงินอื่นๆโปรดระบุ</Checkbox>
+            <Input style={{ width: '200px' }} placeholder="" />
+            <span>ตามที่แนบมาพร้อมนี้  </span>
+
+                    <div style={{textAlign:'right'}}>
+                        <span >(ลงชื่อ)</span>
+                        <Input style={{ width: '200px' }} placeholder="" />
+                        <span>ผู้ขอ</span>
+                    </div>
+                    <div style={{textAlign:'right', paddingRight: '24px'}}>
+                        <Input style={{ width: '200px' }} placeholder="" />
+                    </div>
+                    <div style={{textAlign:'right',paddingRight: '24px'}}>
+                        <span>เบอร์ติดต่อ</span>
+                        <Input style={{ width: '200px' }} placeholder="" />
+                    </div>  
         </StyledWrapper>
     )
 }
