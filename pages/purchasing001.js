@@ -17,42 +17,57 @@ height:1000px;
     margin : 20px 50px 0 50px;
 }
 `
-const purchasing001 = () =>{
+const purchasing001 = () => {
+    const [selectedMenuItem, setSelectedMenuItem] = useState('item1');
+    const componentsSwtich = (key) => {
+        switch (key) {
+            case 'item1':
+                return (<ContentsPC001 />);
+            case 'item2':
+                return (<h1>item2</h1>);
+            case 'item3':
+                return (<h3>item3</h3>);
+            default:
+                break;
+        }
+    };
+
     return (
         <StyledWrapper>
-            <Topbar/>
-            <Headerstatus/>
+            <Topbar />
+            <Headerstatus />
             <div className='textpadding'><h2>คำชี้แจง</h2><span> : กรุณากรอกข้อมูลให้ครบถ้วนก่อนการบันทึกข้อมูล</span></div>
             <div className="menu">
-               <Menu theme="light" mode="horizontal">
-                <Menu.Item >
-                    <Icon type="form" />
-                    แบบจัดหา 001
+                <Menu theme="light" mode="horizontal" defaultSelectedKeys={['1']} onClick={(e) => setSelectedMenuItem(e.key)}>
+                    <Menu.Item key='item1'>
+                        <Icon type="form" />
+                        แบบจัดหา 001
                     </Menu.Item>
-                <Menu.Item >
-                    <Icon type="snippets" />
-                    แบบจัดหา 001-1 (หน้า 1)
+                    <Menu.Item key='item2'>
+                        <Icon type="snippets" />
+                        แบบจัดหา 001-1 (หน้า 1)
                     </Menu.Item>
-                <Menu.Item >
-                    <Icon type="diff" />
-                    แบบจัดหา 001-1 (หน้า 2)
+                    <Menu.Item >
+                        <Icon type="diff" />
+                        แบบจัดหา 001-1 (หน้า 2)
                     </Menu.Item>
-                <Menu.Item >
-                    <Icon type="file-text" />
-                    แบบจัดหา 001-3
+                    <Menu.Item >
+                        <Icon type="file-text" />
+                        แบบจัดหา 001-3
                     </Menu.Item>
-                <Menu.Item >
-                    <Icon type="file-zip" />
-                    ไฟล์ในโครงการ
+                    <Menu.Item >
+                        <Icon type="file-zip" />
+                        ไฟล์ในโครงการ
                     </Menu.Item>
-                <Menu.Item >
-                    <Icon type="dollar" />
-                    ใบเสนอราคา
+                    <Menu.Item >
+                        <Icon type="dollar" />
+                        ใบเสนอราคา
                     </Menu.Item>
-            </Menu> 
+                </Menu>
             </div>
-            
-            <ContentsPC001/>
+            <div>
+                {componentsSwtich(selectedMenuItem)}
+            </div>
         </StyledWrapper>
     )
 }

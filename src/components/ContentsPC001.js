@@ -5,7 +5,7 @@ import 'antd/dist/antd.css'
 import Router from 'next/router'
 const { Text } = Typography;
 const StyledWrapper = styled.div`
-    height:1000px;
+    height:1500px;
     //background-color:#EAECEE;
     margin : 20px 50px 0 50px;
 .titlepage{
@@ -17,21 +17,40 @@ const StyledWrapper = styled.div`
     //background-color:red; 
     font-size: 20px;
     font-weight: bold;
-    padding:20px 0 10px 0;
+    padding:20px 0 20px 0;
 }
 .loca-date{
     text-align: right;
-    padding-top: 20px;
     #text{
         padding:10px 10px 0 0;
     }
 }
 .title-offer{
     text-align: left;
-    padding: 20px 0 0 0;
+    padding: 10px 0 0 0;
     #detali{
         padding:0 0 0 10px;
     }
+}
+Input{
+    margin: 10px 20px 10px 20px;
+}
+.block{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height:35px;
+}
+.detail-table{
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    flex-direction: column;
+    padding: 0 0 0 250px;
+}
+.layout-table{
+    display:flex;
 }
 `
 
@@ -52,8 +71,39 @@ const Contents = () => {
                 <span>เรื่อง</span>   <span id='detali'>ขอให้ช่วยจัดหาพัสดุ</span> <br></br>
                 <span>เรียน</span>   <span id='detali'>หัวหน้าเจ้าหน้าที่พัสดุ</span>
             </div>
-            <p style={{ fontSize: "30px", paddingTop: '15px' }}>1) รายละเอียด</p>
-            <span style={{ padding: '15px 0 0 150px' }}>ด้วยมหาวิทยาลัยการคอมพิวเตอร์ มีความประสงค์ที่จะใช้พัสดุด้านล่างนี้เพื่อ ใช้ในวิชาโครงงาน วิชา 242-402 มีรายการดังต่อไปนี้</span>
+            <p style={{ fontSize: "30px", padding: '15px 0 0 0px', marginBottom: "5px" }}>1) รายละเอียด</p>
+            <div className="title-offer">
+                <span >ด้วยมหาวิทยาลัยการคอมพิวเตอร์ มีความประสงค์ที่จะใช้พัสดุด้านล่างนี้เพื่อ</span>   <Input style={{ width: '500px' }} placeholder="ใช้ในวิชาโครงงาน วิชา 242-402 มีรายการดังต่อไปนี้" /> <br></br>
+                <span >ชื่อโครงการ (ถ้ามี)</span>   <Input style={{ width: '500px' }} placeholder=" " /><span >ชื่อโครงการ (ถ้ามี)</span> <br></br>
+                <span >วันที่ต้องใช้พัสดุ</span>   <Input style={{ width: '500px' }} placeholder=" " /><br></br>
+            </div>
+            <p style={{ fontSize: "30px", paddingTop: '15px' }}>2) รายละเอียดคุณลักษณะเฉพาะ/ขอบเขตงาน</p>
+            <div className="title-offer">
+                <span >2.1 รายละเอียดคุณลักษณะเฉพาะ/ขอบเขตงาน (ประทับตรามหาวิทยาลัยพร้อมผู้มีอำนาจลงนาม) จำนวน</span> <Input style={{ width: '100px' }} placeholder=" ตัวอย่าง 1" /><span>แผ่น</span><br></br>
+                <span style={{ paddingRight: '43px' }}>2.2 บันทึกการแต่งตั้งคณะกรรมการกำหนดคุณลักษณะเฉพาะ/ขอบเขตงานและราคากลาง จำนวน</span> <Input style={{ width: '100px' }} placeholder=" ตัวอย่าง 1" /><span>แผ่น</span><br></br>
+                <span style={{ paddingRight: '107px' }} >2.3 บันทึกรายงานผลการจัดทำคุณลักษณะเฉพาะ/ขอบเขตงานและราคากลาง จำนวน</span> <Input style={{ width: '100px' }} placeholder=" ตัวอย่าง 1" /><span>แผ่น</span><br></br>
+            </div>
+            <p style={{ fontSize: "30px", paddingTop: '15px' }}>3) คณะกรรมการ</p>
+            <div className="block">
+                <span>คณะกรรมการพิจารณาผล</span>
+                <span>คณะกรรมการตรวจรับพัสดุ</span>
+            </div>
+            <div className="layout-table">
+                <div className="detail-table">
+                <div>
+                    <span>3.1</span><Input style={{ width: '200px' }} placeholder="" /><span>ประธานกรรมการ</span><br></br>
+                    <span>3.2</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span><br></br>
+                   <span>3.3</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span> <br></br>
+                </div>
+            </div>
+                <div className="detail-table">
+                <div>
+                    <span>3.1</span><Input style={{ width: '200px' }} placeholder="" /><span>ประธานกรรมการ</span><br></br>
+                    <span>3.2</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span><br></br>
+                   <span>3.3</span><Input style={{ width: '200px' }} placeholder="" /><span>กรรมการ</span> <br></br>
+                </div>
+            </div>
+            </div>
         </StyledWrapper>
     )
 }
