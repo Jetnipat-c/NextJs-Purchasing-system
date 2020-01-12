@@ -5,7 +5,7 @@ import { Icon, Menu } from 'antd';
 import 'antd/dist/antd.css'
 import styled from 'styled-components'
 import ContentsPC001 from '../src/components/ContentsPC001'
-import ContentsPC002 from '../src/components/ContentsPC002'
+import ContentsPC001_1 from '../src/components/ContentsPC001_1'
 import React, { useState } from 'react';
 const StyledWrapper = styled.div`
 height:1000px;
@@ -25,7 +25,7 @@ const purchasing001 = () => {
             case 'item1':
                 return (<ContentsPC001/>);
             case 'item2':
-                return (<ContentsPC002/>);
+                return (<ContentsPC001_1/>);
             case 'item3':
                 return (<h3>item3</h3>);
             default:
