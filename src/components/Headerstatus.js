@@ -22,12 +22,11 @@ h3 {
     padding: 0 0 0 10px;
 }
 `
-const Header = props => {
-    const [stateStatus, setstateStatus] = useState('Not yet logged in');
+const Headerstatus = props => {
     return (
         <StyledWrapper>
-            <h3>ย้อนกลับ >></h3><h2>{stateStatus}</h2>
+            <h3>ย้อนกลับ >></h3><h2>xxxx</h2>
         </StyledWrapper>
     )
 }
-export default Header;
+export default Headerstatus;

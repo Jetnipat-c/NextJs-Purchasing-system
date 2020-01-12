@@ -19,8 +19,8 @@ const Footer = () => {
     return (
         <StyledWrapper>
             <div className="copyr">
-               <h3>Copyright © 2020 - 9999 CHEER-CoE ระบบจัดซื้อ (Purchasing system) </h3>
-               <h3>แจ้งปัญหาการใช้งาน โทรศัพท์ xxxxxxxxxxxx หรือ alonecheer@hotmail.com , 6035512021@psu.ac.th</h3> 
+               <h3>Copyright © 2020 - 9999 CoE ระบบจัดซื้อ (Purchasing system) </h3>
+               <h3>แจ้งปัญหาการใช้งาน โทรศัพท์ xxxxxxxxxxxx หรือ xxxxxxxxxxxxxxxxxxxxx</h3> 
                </div>
         </StyledWrapper>
     )

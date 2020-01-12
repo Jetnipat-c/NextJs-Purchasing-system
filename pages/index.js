@@ -9,7 +9,6 @@ const HomePage = prop => {
         <StyledWrapper>
             <Topbar></Topbar> 
             <Login>
-               
             </Login>
         </StyledWrapper>
     )
