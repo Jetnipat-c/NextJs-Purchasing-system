@@ -37,7 +37,7 @@ const LogIn = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const [loginStatus, setLoginStatus] = useState('Not yet logged in');
+    const [loginStatus, setLoginStatus] = useState('');
 
     const login = async () => {
         const res = await axios.post('/api/psu', { username, password });
