@@ -13,7 +13,7 @@ margin : 20px 50px 0 50px;
     text-align:center;
   }
   .example-input .ant-input {
-    //width: 200px;
+    width: 200px;
     margin: 0 8px 8px 0;
   }
 `
@@ -45,7 +45,7 @@ const purchasing001_1 = () => {
             </Row>
             {/* --------------------------------------------------------------------------------------------    */}
             <Row gutter={[8, 32]} align='middle' type="flex" justify="space-between">
-                <div className="example-input">
+                {/* <div className="pd"></div> */}
                 <Col className="gutter-row" span={2}>
                     <div className="gutter-box">1</div>
                     <div className="gutter-box">2</div>
@@ -88,7 +88,6 @@ const purchasing001_1 = () => {
                     <Input  maxLength="6" placeholder="" />
                     <Input  maxLength="6" placeholder="" />
                 </Col>
-                </div>
             </Row>
         </StyledWrapper>
     )
