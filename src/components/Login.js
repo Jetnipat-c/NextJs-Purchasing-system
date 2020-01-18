@@ -1,11 +1,9 @@
 import styled from 'styled-components'
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import 'antd/dist/antd.css'
-import Topbar from './Topbar'
 import Router from 'next/router'
 import React, { useState } from 'react';
 import axios from 'axios';
-import Header from '../components/Header'
 const StyledWrapper = styled.div`
   
 .main{
@@ -33,7 +31,7 @@ p{
     color: #143C6D;
 }
 `
-const LogIn = () => {
+const LogInPage= (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -42,8 +40,9 @@ const LogIn = () => {
     const login = async () => {
         const res = await axios.post('/api/psu', { username, password });
         // setLoginStatus(JSON.stringify(res.data))
-        console.log(res.data[1])
+       
         if (res.data[1] != '') {
+            console.log(res.data)
             Router.push('/main')
         }
         else
@@ -66,4 +65,5 @@ const LogIn = () => {
         </StyledWrapper >
     )
 }
-export default LogIn;
+
+export default LogInPage;

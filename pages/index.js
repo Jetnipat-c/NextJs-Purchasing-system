@@ -11,6 +11,8 @@ const HomePage = prop => {
             <Login>
             </Login>
         </StyledWrapper>
+        
     )
 }
+
 export default HomePage;
