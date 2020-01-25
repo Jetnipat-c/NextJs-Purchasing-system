@@ -67,19 +67,32 @@ Input{
 
 `
 const Content001 = (props) => {
-    const [text1,settext1] = useState('')
-    const [text2,settext2] = useState('')
-    const [text3,settext3] = useState('')
-    const [text4,settext4] = useState('')
-    const [x1,setx1] = useState('')
-    const data=[{text1,x1}]
-        
-   const  onChange=(e)=> {
-        console.log(`checked = ${e.target.value}`);
-        if (e.target.value==='x1')
-        setx1([...'x1'])
+    const [text1, settext1] = useState('')
+    const [text2, settext2] = useState('')
+    const [text3, settext3] = useState('')
+    const [text4, settext4] = useState('')
+    const [x1, setx1] = useState('')
+    const data = [{ text1, x1 }]
+
+    let jsPDF = null;
+
+    if (typeof window !== "undefined") {
+        import("jspdf").then(module => {
+            jsPDF = module.default;
+        });
     }
-    const handle =()=>{
+    const genpdf = () => {
+        var doc = new jsPDF()
+        doc.text(text1+'<< TEXTIPUT', 10, 10)
+        doc.save('a4.pdf')
+    }
+
+    const onChange = (e) => {
+        console.log(`checked = ${e.target.value}`);
+        if (e.target.value === 'x1')
+            setx1([...'x1'])
+    }
+    const handle = () => {
         // event.preventDefault();
         props.addinformation(data)
         console.log(data);
@@ -91,11 +104,11 @@ const Content001 = (props) => {
             </div>
             <div className="loca-date">
                 <span id='text'>เอกสารที่ มอ. 696 /</span>
-                 <Button onClick={handle}></Button>
-                 <Input  onChange={e => settext1(e.target.value)} style={{ width: '150px' }} placeholder="123" />
+                <Button onClick={handle}></Button>
+                <Input onChange={e => settext1(e.target.value)} style={{ width: '150px' }} placeholder="123" />
             </div>
             <div className="loca-date">
-                <span id='text'>ลงวันที่</span> 
+                <span id='text'>ลงวันที่</span>
                 <Input onChange={e => settext2(e.target.value)} style={{ width: '150px' }} placeholder="27/11/2563" />
             </div>
             <div className="title-offer">
@@ -105,9 +118,9 @@ const Content001 = (props) => {
             <p style={{ fontSize: "30px", padding: '15px 0 0 0px', marginBottom: "5px" }}>1) รายละเอียด</p>
             <div className="title-offer">
                 <span >ด้วยมหาวิทยาลัยการคอมพิวเตอร์ มีความประสงค์ที่จะใช้พัสดุด้านล่างนี้เพื่อ</span>   <Input style={{ width: '500px' }} placeholder="ใช้ในวิชาโครงงาน วิชา 242-402 มีรายการดังต่อไปนี้" /> <br></br>
-                <span >ชื่อโครงการ (ถ้ามี)</span>   
+                <span >ชื่อโครงการ (ถ้ามี)</span>
                 <Input onChange={e => settext3(e.target.value)} style={{ width: '500px' }} placeholder=" " /><span >ชื่อโครงการ (ถ้ามี)</span> <br></br>
-                <span >วันที่ต้องใช้พัสดุ</span>   
+                <span >วันที่ต้องใช้พัสดุ</span>
                 <Input onChange={e => settext4(e.target.value)} style={{ width: '500px' }} placeholder=" " /><br></br>
             </div>
             <p style={{ fontSize: "30px", paddingTop: '15px' }}>2) รายละเอียดคุณลักษณะเฉพาะ/ขอบเขตงาน</p>
@@ -181,8 +194,9 @@ const Content001 = (props) => {
                 <Input style={{ width: '200px' }} placeholder="" />
             </div>
             <div>
-            testredux : {props.info[0].text1}
+                testredux : {props.info[0].text1}
             </div>
+            <button onClick={genpdf}>Dowload PDF</button>
         </StyledWrapper>
     )
 }
@@ -192,8 +206,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => {
     return {
-        addinformation: (props) =>dispatch(addinformation(props))
-  }
+        addinformation: (props) => dispatch(addinformation(props))
+    }
 };
 
 export default connect(
