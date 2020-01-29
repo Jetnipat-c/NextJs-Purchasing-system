@@ -22,6 +22,10 @@ const purchasing001_2 = (props) => {
         <StyledWrapper>
             <div className="title-offer">
                 <span>ชื่อโครงการ : </span> <Input></Input>
+                <span>หน่วยงานเจ้าของโครงการ : </span> <Input></Input>
+                <span>วงเงินงบประมาณที่ได้รับจัดสรร : </span> <Input></Input> <span>บาท</span>
+                <span>วันที่กำหนดราคากลาง (ราคาอ้างอิง) : </span> <Input></Input>
+                <span>ชื่อโครงการ : </span> <Input></Input>
             </div>
         </StyledWrapper>
     )

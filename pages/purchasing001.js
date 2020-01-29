@@ -66,11 +66,11 @@ const purchasing001 = () => {
                         <Icon type="snippets" />
                         แบบจัดหา 001-1 (หน้า 1)
                     </Menu.Item >
-                    <Menu.Item key='item3'>
+                    <Menu.Item >
                         <Icon type="diff" />
                         แบบจัดหา 001-1 (หน้า 2)
                     </Menu.Item>
-                    <Menu.Item >
+                    <Menu.Item key='item3'>
                         <Icon type="file-text" />
                         แบบจัดหา 001-3
                     </Menu.Item>
