@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @react-pdf/renderer
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add css-loader style-loader --dev
 
 PATH: 
   C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Tesseract-OCR;C:\Program Files\Tesseract-OCR\tessdata;C:\Program Files\MATLAB\R2018a\runtime\win64;C:\Program Files\MATLAB\R2018a\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Yarn\bin\;C:\Anaconda;C:\Anaconda\Library\mingw-w64\bin;C:\Anaconda\Library\usr\bin;C:\Anaconda\Library\bin;C:\Anaconda\Scripts;C:\Users\Pom\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Pom\AppData\Local\Programs\Python\Python36-32\;C:\Users\Pom\AppData\Local\Microsoft\WindowsApps;C:\Users\Pom\AppData\Roaming\npm;C:\Users\Pom\AppData\Local\Yarn\bin;C:\Users\Pom\AppData\Local\Programs\Microsoft VS Code\bin
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/next-redux-wrapreper: Not found
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66056:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140665:22)
-      at Request.emit (events.js:210:5)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141637:10)
-      at Request.emit (events.js:210:5)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141559:12)
-      at Object.onceWrapper (events.js:299:28)
-      at IncomingMessage.emit (events.js:215:7)
-      at endReadableNT (_stream_readable.js:1184:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+  Error: EBUSY: resource busy or locked, copyfile 'C:\Users\Pom\AppData\Local\Yarn\Cache\v6\npm-emoji-regex-8.0.0-e818fd69ce5ccfcb404594f842963bf53164cc37-integrity\node_modules\emoji-regex\LICENSE-MIT.txt' -> 'C:\NextJs-Purchasing-system\node_modules\emoji-regex\LICENSE-MIT.txt'
 
 npm manifest: 
   {
@@ -41,6 +31,7 @@ npm manifest:
     "author": "",
     "license": "ISC",
     "dependencies": {
+      "@react-pdf/renderer": "^1.6.8",
       "@zeit/next-css": "^1.0.1",
       "antd": "^3.26.6",
       "axios": "^0.19.1",
@@ -48,7 +39,7 @@ npm manifest:
       "mariadb": "^2.1.5",
       "next": "^9.1.7",
       "next-images": "^1.3.0",
-      "next-redux-wrapreper": "^4.0.1",
+      "next-redux-wrapper": "^4.0.1",
       "react": "^16.12.0",
       "react-dom": "^16.12.0",
       "react-redux": "^7.1.3",

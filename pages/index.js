@@ -4,12 +4,11 @@ import Topbar from '../src/components/Topbar'
 const StyledWrapper = styled.div`
 
 `
-const HomePage = prop => {
+const HomePage = (props) => {
     return (
         <StyledWrapper>
             <Topbar></Topbar> 
-            <Login>
-            </Login>
+            <Login></Login>
         </StyledWrapper>
         
     )

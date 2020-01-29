@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Row, Col, Input, Button } from 'antd';
-import * as jsPDF from 'jspdf'
+import 'antd/dist/antd.css'
 const StyledWrapper = styled.div`
 height:1000px;
 margin : 20px 50px 0 50px;
@@ -18,19 +18,61 @@ margin : 20px 50px 0 50px;
     margin: 0 8px 8px 0;
   }
 `
-const purchasing001_1 = () => {
+const purchasing001_1 = (props) => {
 
-    const handle = () => {
-        var doc = new jsPDF()
-
-        doc.text('Hello world!', 10, 10)
-        doc.save('a4.pdf')
-    }
     return (
         <StyledWrapper>
-            <Button onClick={handle}>generrate</Button>
-            <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
-            <Row gutter={[8, 32]} align='middle' type="flex" justify="space-between">
+            <Row gutter={[16, 16]} align='middle' type="flex" justify="space-between">
+                    <div className="gutter-box">1</div>
+                    <div className="gutter-box">2</div>
+                    <div className="gutter-box">3</div>
+                    <div className="gutter-box">4</div>
+                    <div className="gutter-box">5</div>
+                    <div className="gutter-box">6</div>
+                    <div className="gutter-box">7</div>
+                    <div className="gutter-box">8</div>
+            </Row>
+            <Row gutter={[16, 16]} align='middle' type="flex" justify="space-between">
+                    <div className="gutter-box">1</div>
+                    <div className="gutter-box">2</div>
+                    <div className="gutter-box">3</div>
+                    <div className="gutter-box">4</div>
+                    <div className="gutter-box">5</div>
+                    <div className="gutter-box">6</div>
+                    <div className="gutter-box">7</div>
+                    <div className="gutter-box">8</div>
+            </Row>
+            <Row gutter={[16, 16]} align='middle' type="flex" justify="space-between">
+                    <div className="gutter-box">1</div>
+                    <div className="gutter-box">2</div>
+                    <div className="gutter-box">3</div>
+                    <div className="gutter-box">4</div>
+                    <div className="gutter-box">5</div>
+                    <div className="gutter-box">6</div>
+                    <div className="gutter-box">7</div>
+                    <div className="gutter-box">8</div>
+            </Row>
+            <Row gutter={[16, 16]} align='middle' type="flex" justify="space-between">
+                    <div className="gutter-box">1</div>
+                    <div className="gutter-box">2</div>
+                    <div className="gutter-box">3</div>
+                    <div className="gutter-box">4</div>
+                    <div className="gutter-box">5</div>
+                    <div className="gutter-box">6</div>
+                    <div className="gutter-box">7</div>
+                    <div className="gutter-box">8</div>
+            </Row>
+            <Row gutter={[16, 16]} align='middle' type="flex" justify="space-between">
+                    <div className="gutter-box">1</div>
+                    <div className="gutter-box">2</div>
+                    <div className="gutter-box">3</div>
+                    <div className="gutter-box">4</div>
+                    <div className="gutter-box">5</div>
+                    <div className="gutter-box">6</div>
+                    <div className="gutter-box">7</div>
+                    <div className="gutter-box">8</div>
+            </Row>
+            {/* <Row gutter={[8, 32]} align='middle' type="flex" justify="space-between">
                 <Col className="gutter-row" span={2}>
                     <div className="gutter-box">ลำดับ</div>
                 </Col >
@@ -54,8 +96,7 @@ const purchasing001_1 = () => {
                 </Col>
             </Row>
             {/* --------------------------------------------------------------------------------------------    */}
-            <Row gutter={[8, 32]} align='middle' type="flex" justify="space-between">
-                {/* <div className="pd"></div> */}
+            {/* <Row gutter={[8, 32]} align='middle' type="flex" justify="space-between">
                 <Col className="gutter-row" span={2}>
                     <div className="gutter-box">1</div>
                     <div className="gutter-box">2</div>
@@ -63,42 +104,42 @@ const purchasing001_1 = () => {
                     <div className="gutter-box">4</div>
                 </Col>
                 <Col className="gutter-row" span={2}>
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
                 </Col>
                 <Col className="gutter-row" span={6}>
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
                 </Col>
                 <Col className="gutter-row" span={2}>
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
                 </Col>
                 <Col className="gutter-row" span={2}>
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
                 </Col>
                 <Col className="gutter-row" span={4}>
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
                 </Col>
                 <Col className="gutter-row" span={4}>
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
-                    <Input maxLength="6" placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
+                    <Input placeholder="" />
                 </Col>
-            </Row>
+            </Row> */}
         </StyledWrapper>
     )
 }

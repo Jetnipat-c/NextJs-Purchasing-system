@@ -23,7 +23,8 @@ const purchasing001 = () => {
     const componentsSwtich = (key) => {
         switch (key) {
             case 'item1':
-                return (<ContentsPC001/>);
+                return (<ContentsPC001/>
+                    );
             case 'item2':
                 return (<ContentsPC001_1/>);
             case 'item3':
