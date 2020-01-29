@@ -6,7 +6,7 @@ import 'antd/dist/antd.css'
 import styled from 'styled-components'
 import ContentsPC001 from '../src/components/ContentsPC001'
 import ContentsPC001_1 from '../src/components/ContentsPC001_1'
-import ContentsPC001_2 from '../src/components/ContentsPC001_2'
+import ContentsPC001_2 from '../src/components/ContentsPC001_3'
 import React, { useState } from 'react';
 const StyledWrapper = styled.div`
 height:100%;
