@@ -67,7 +67,6 @@ Input{
 .bt{
     display:flex;
     width:100%;
-    margin-button: px;
     justify-content: center;
     align-items: center;
     margin: 20px;
@@ -79,6 +78,7 @@ Input{
 }
 .btdowload{
     //background-color:green;
+    padding-right:20px;
 }
 `
 class ComponentToPrint extends React.Component {
@@ -192,22 +192,22 @@ class ComponentToPrint extends React.Component {
                 </div>
             {/* <div>
                 testredux : {props.info[0].text1}
-            </div>
-                <div className="bt">
-                    <div className="btsubmit">
-                        <Button  >Dowload PDF</Button>
-                    </div>
+            </div> */}
+                {/* <div className="bt">
                     <div className="btdowload">
-                        <Button  onClick={this.handle}>Submit</Button>
+                        <Button type="danger">Cancel</Button>
+                    </div>
+                    <div className="btsubmit">
+                        <Button type="primary">Submit</Button>
                     </div>
                 </div> */}
                 
-                <ReactToPrint
+                {/* <ReactToPrint
                     trigger={() => <a href="#">Print this out!</a>}
                     content={() => this.current}
                     // pageStyle="@page { size: A4 portrait;}"
                     pageStyle='@page { size: A4 portrait; margin: 0mm; } @media print { body { -webkit-print-color-adjust: exact; padding: 40px !important; } }'
-                />
+                /> */}
     
             </StyledWrapper>
         );

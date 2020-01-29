@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Row, Col, Input, Button } from 'antd';
 import 'antd/dist/antd.css'
 const StyledWrapper = styled.div`
-height:1000px;
+height:100%;
 margin : 20px 50px 0 50px;
 .gutter-example .ant-row > div {
     background: transparent;

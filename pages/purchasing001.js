@@ -1,14 +1,14 @@
 
 import Headerstatus from '../src/components/Headerstatus'
 import Topbar from '../src/components/Topbar'
-import { Icon, Menu } from 'antd';
+import { Icon, Menu ,Button } from 'antd';
 import 'antd/dist/antd.css'
 import styled from 'styled-components'
 import ContentsPC001 from '../src/components/ContentsPC001'
 import ContentsPC001_1 from '../src/components/ContentsPC001_1'
 import React, { useState } from 'react';
 const StyledWrapper = styled.div`
-height:1000px;
+height:100%;
 //background-color:#EAECEE;
 
 .textpadding{
@@ -16,6 +16,22 @@ height:1000px;
 }
 .menu{
     margin : 20px 50px 0 50px;
+}
+.bt{
+    display:flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    //background-color:red;
+}
+.btsubmit{
+    //background-color:pink;
+    padding-right:20px;
+}
+.btdowload{
+    //background-color:green;
+    padding-right:20px;
 }
 `
 const purchasing001 = () => {
@@ -70,6 +86,14 @@ const purchasing001 = () => {
             <div>
                 {componentsSwtich(selectedMenuItem)}
             </div>
+            <div className="bt">
+                    <div className="btdowload">
+                        <Button type="danger">Cancel</Button>
+                    </div>
+                    <div className="btsubmit">
+                        <Button type="primary">Submit</Button>
+                    </div>
+                </div>
         </StyledWrapper>
     )
 }
