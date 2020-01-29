@@ -32,110 +32,41 @@ const purchasing001_1 = (props) => {
                 <Col span={2}><div className="gutter-box">จำนวนเงิน</div></Col>
             </Row>
             <Row gutter={[16, 48]} align='middle' type="flex" justify="space-between">
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
             </Row>
             <Row gutter={[16, 48]} align='middle' type="flex" justify="space-between">
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
             </Row>
             <Row gutter={[16, 48]} align='middle' type="flex" justify="space-between">
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
             </Row>
             <Row gutter={[16, 48]} align='middle' type="flex" justify="space-between">
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
-            <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
+                <Col span={2}><Input placeholder="" /></Col>
             </Row>
-
-            {/* <Row gutter={[8, 32]} align='middle' type="flex" justify="space-between">
-                <Col className="gutter-row" span={2}>
-                    <div className="gutter-box">ลำดับ</div>
-                </Col >
-                <Col className="gutter-row" span={2}>
-                    <div className="gutter-box">ประเภท</div>
-                </Col>
-                <Col className="gutter-row" span={6}>
-                    <div className="gutter-box">รายการ</div>
-                </Col>
-                <Col className="gutter-row" span={2}>
-                    <div className="gutter-box">จำนวน</div>
-                </Col>
-                <Col className="gutter-row" span={2}>
-                    <div className="gutter-box">หน่วย</div>
-                </Col>
-                <Col className="gutter-row" span={4}>
-                    <div className="gutter-box">ราคา/หน่วย</div>
-                </Col>
-                <Col className="gutter-row" span={4}>
-                    <div className="gutter-box">จำนวนเงิน</div>
-                </Col>
-            </Row>
-            {/* --------------------------------------------------------------------------------------------    */}
-            {/* <Row gutter={[8, 32]} align='middle' type="flex" justify="space-between">
-                <Col className="gutter-row" span={2}>
-                    <div className="gutter-box">1</div>
-                    <div className="gutter-box">2</div>
-                    <div className="gutter-box">3</div>
-                    <div className="gutter-box">4</div>
-                </Col>
-                <Col className="gutter-row" span={2}>
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                </Col>
-                <Col className="gutter-row" span={6}>
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                </Col>
-                <Col className="gutter-row" span={2}>
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                </Col>
-                <Col className="gutter-row" span={2}>
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                </Col>
-                <Col className="gutter-row" span={4}>
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                </Col>
-                <Col className="gutter-row" span={4}>
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                    <Input placeholder="" />
-                </Col>
-            </Row> */}
         </StyledWrapper>
     )
 }

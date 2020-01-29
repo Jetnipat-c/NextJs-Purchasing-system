@@ -1,11 +1,12 @@
 
 import Headerstatus from '../src/components/Headerstatus'
 import Topbar from '../src/components/Topbar'
-import { Icon, Menu ,Button } from 'antd';
+import { Icon, Menu, Button } from 'antd';
 import 'antd/dist/antd.css'
 import styled from 'styled-components'
 import ContentsPC001 from '../src/components/ContentsPC001'
 import ContentsPC001_1 from '../src/components/ContentsPC001_1'
+import ContentsPC001_2 from '../src/components/ContentsPC001_2'
 import React, { useState } from 'react';
 const StyledWrapper = styled.div`
 height:100%;
@@ -22,16 +23,17 @@ height:100%;
     width:100%;
     justify-content: center;
     align-items: center;
-    margin: 20px;
     //background-color:red;
 }
 .btsubmit{
     //background-color:pink;
-    padding-right:20px;
+    //padding-right:20px;
+    margin: 20px;
 }
 .btdowload{
     //background-color:green;
-    padding-right:20px;
+    //padding-right:20px;
+    margin: 20px;
 }
 `
 const purchasing001 = () => {
@@ -39,12 +41,11 @@ const purchasing001 = () => {
     const componentsSwtich = (key) => {
         switch (key) {
             case 'item1':
-                return (<ContentsPC001/>
-                    );
+                return (<ContentsPC001 />);
             case 'item2':
-                return (<ContentsPC001_1/>);
+                return (<ContentsPC001_1 />);
             case 'item3':
-                return (<h3>item3</h3>);
+                return (<ContentsPC001_2 />);
             default:
                 break;
         }
@@ -64,8 +65,8 @@ const purchasing001 = () => {
                     <Menu.Item key='item2'>
                         <Icon type="snippets" />
                         แบบจัดหา 001-1 (หน้า 1)
-                    </Menu.Item>
-                    <Menu.Item >
+                    </Menu.Item >
+                    <Menu.Item key='item3'>
                         <Icon type="diff" />
                         แบบจัดหา 001-1 (หน้า 2)
                     </Menu.Item>
@@ -87,13 +88,13 @@ const purchasing001 = () => {
                 {componentsSwtich(selectedMenuItem)}
             </div>
             <div className="bt">
-                    <div className="btdowload">
-                        <Button type="danger">Cancel</Button>
-                    </div>
-                    <div className="btsubmit">
-                        <Button type="primary">Submit</Button>
-                    </div>
+                <div className="btdowload">
+                    <Button type="danger">Cancel</Button>
                 </div>
+                <div className="btsubmit">
+                    <Button type="primary">Submit</Button>
+                </div>
+            </div>
         </StyledWrapper>
     )
 }
