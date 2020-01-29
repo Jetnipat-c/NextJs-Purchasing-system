@@ -6,7 +6,9 @@ import 'antd/dist/antd.css'
 import styled from 'styled-components'
 import ContentsPC001 from '../src/components/ContentsPC001'
 import ContentsPC001_1 from '../src/components/ContentsPC001_1'
-import ContentsPC001_2 from '../src/components/ContentsPC001_3'
+import ContentsPC001_3 from '../src/components/ContentsPC001_3'
+import ContentsPC001_fileup from '../src/components/ContentsPC001_fileup'
+import ContentsPC001_fileoffer from '../src/components/ContentsPC001_fileoffer'
 import React, { useState } from 'react';
 const StyledWrapper = styled.div`
 height:100%;
@@ -45,7 +47,13 @@ const purchasing001 = () => {
             case 'item2':
                 return (<ContentsPC001_1 />);
             case 'item3':
-                return (<ContentsPC001_2 />);
+                return ('item3');
+            case 'item4':
+                return (<ContentsPC001_3 />);
+            case 'item5':
+                return (<ContentsPC001_fileup/>);
+            case 'item6':
+                return (<ContentsPC001_fileoffer/>);
             default:
                 break;
         }
@@ -66,19 +74,19 @@ const purchasing001 = () => {
                         <Icon type="snippets" />
                         แบบจัดหา 001-1 (หน้า 1)
                     </Menu.Item >
-                    <Menu.Item >
+                    <Menu.Item key='item3'>
                         <Icon type="diff" />
                         แบบจัดหา 001-1 (หน้า 2)
                     </Menu.Item>
-                    <Menu.Item key='item3'>
+                    <Menu.Item key='item4'>
                         <Icon type="file-text" />
                         แบบจัดหา 001-3
                     </Menu.Item>
-                    <Menu.Item >
+                    <Menu.Item key='item5'>
                         <Icon type="file-zip" />
                         ไฟล์ในโครงการ
                     </Menu.Item>
-                    <Menu.Item >
+                    <Menu.Item key='item6'>
                         <Icon type="dollar" />
                         ใบเสนอราคา
                     </Menu.Item>
