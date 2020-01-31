@@ -12,24 +12,27 @@ const StyledWrapper = styled.div`
     display:flex;
     align-items: center;
     img {
-        width:50px;
-        height:40px;
+       // width:50px;
+        //height:40px;
         margin-right:10px;
+        max-width:50px;
+        max-height:40px;
     }
 }
 h3 {
     margin: 0;
     color:white;
+    font-size:1vw;
 }
 `
 const TopBar = () => {
     return (
         <StyledWrapper>
-           <div className="logo">
-               <img src='static/images/PSULOGONEWENG3.png'/>
-               <h3>ระบบจัดซื้อ (Purchasing system)</h3>
-           </div>
-           
+            <div className="logo">
+                <img src='static/images/PSULOGONEWENG3.png' />
+                <h3>ระบบจัดซื้อ Purchasing system</h3>
+            </div>
+
         </StyledWrapper>
     )
 }

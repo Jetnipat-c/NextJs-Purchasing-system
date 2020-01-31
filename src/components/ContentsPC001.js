@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
     //background-color:red; 
     font-size: 20px;
     font-weight: bold;
-    padding:20px 0 20px 0;
+    padding:70px 0 100px 0;
 }
 .loca-date{
     text-align: right;
@@ -81,6 +81,9 @@ Input{
     //background-color:green;
     padding-right:20px;
 }
+Input {
+    max-width: 300px ;
+}
 `
 class ComponentToPrint extends React.Component {
     onChange(checkedValues) {
@@ -100,11 +103,11 @@ class ComponentToPrint extends React.Component {
             </div>
                 <div className="loca-date">
                     <span id='text'>เอกสารที่ มอ. 696 /</span>
-                    <Input onChange={e => settext1(e.target.value)} style={{ width: '150px' }} placeholder="123" />
+                    <Input onChange={e => settext1(e.target.value)} style={{ width: '100px' }} placeholder="123" />
                 </div>
                 <div className="loca-date">
                     <span id='text'>ลงวันที่</span>
-                    <Input onChange={e => settext2(e.target.value)} style={{ width: '150px' }} placeholder="27/11/2563" />
+                    <Input onChange={e => settext2(e.target.value)} style={{ width: '100px' }} placeholder="27/11/2563" />
                 </div>
                 <div className="title-offer">
                     <span>เรื่อง</span>   <span id='detali'>ขอให้ช่วยจัดหาพัสดุ</span> <br></br>
