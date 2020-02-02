@@ -1,10 +1,11 @@
 
 import styled from 'styled-components'
 import { Form, Icon, Input, Button, Checkbox, Row, Col } from 'antd';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux'
 import { addinformation } from '../redux/profile/profileaction'
 import ReactToPrint from 'react-to-print';
+import { useForm } from 'react-hook-form';
 const StyledWrapper = styled.div`
     height:100%; 
     //background-color:#EAECEE;
@@ -18,7 +19,7 @@ const StyledWrapper = styled.div`
     //background-color:red; 
     font-size: 20px;
     font-weight: bold;
-    padding:70px 0 100px 0;
+    //padding:70px 0 100px 0;
 }
 .loca-date{
     text-align: right;
@@ -29,7 +30,7 @@ const StyledWrapper = styled.div`
 .title-offer{
     text-align: left;
     font-size:17px;
-    padding: 10px 0 0 0;
+    padding: 5px 0 0 0;
     #detali{
         padding:0 0 0 10px;
     }
@@ -86,6 +87,7 @@ Input {
 }
 `
 class ComponentToPrint extends React.Component {
+
     onChange(checkedValues) {
         console.log('checked = ', checkedValues);
     }
@@ -96,6 +98,7 @@ class ComponentToPrint extends React.Component {
         console.log(data);
     }
     render() {
+        
         return (
             <StyledWrapper>
                 <div className="titlepage">
@@ -117,7 +120,7 @@ class ComponentToPrint extends React.Component {
                 <div className="title-offer">
                     <span >ด้วยมหาวิทยาลัยการคอมพิวเตอร์ มีความประสงค์ที่จะใช้พัสดุด้านล่างนี้เพื่อ</span>   <Input style={{ width: '500px' }} placeholder="ใช้ในวิชาโครงงาน วิชา 242-402 มีรายการดังต่อไปนี้" /> <br></br>
                     <span >ชื่อโครงการ (ถ้ามี)</span>
-                    <Input onChange={e => settext3(e.target.value)} style={{ width: '500px' }} placeholder=" " /><span >ชื่อโครงการ (ถ้ามี)</span> <br></br>
+                    <Input onChange={e => settext3(e.target.value)} style={{ width: '500px' }} placeholder=" " /><br></br>
                     <span >วันที่ต้องใช้พัสดุ</span>
                     <Input onChange={e => settext4(e.target.value)} style={{ width: '500px' }} placeholder=" " /><br></br>
                 </div>
@@ -194,25 +197,11 @@ class ComponentToPrint extends React.Component {
                     <span>เบอร์ติดต่อ</span>
                     <Input onChange={e => settext25(e.target.value)} style={{ width: '200px' }} placeholder="" />
                 </div>
-            {/* <div>
+                {/* <div>
                 testredux : {props.info[0].text1}
             </div> */}
-                {/* <div className="bt">
-                    <div className="btdowload">
-                        <Button type="danger">Cancel</Button>
-                    </div>
-                    <div className="btsubmit">
-                        <Button type="primary">Submit</Button>
-                    </div>
-                </div> */}
                 
-                {/* <ReactToPrint
-                    trigger={() => <a href="#">Print this out!</a>}
-                    content={() => this.current}
-                    // pageStyle="@page { size: A4 portrait;}"
-                    pageStyle='@page { size: A4 portrait; margin: 0mm; } @media print { body { -webkit-print-color-adjust: exact; padding: 40px !important; } }'
-                /> */}
-    
+
             </StyledWrapper>
         );
     }

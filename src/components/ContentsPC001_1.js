@@ -29,12 +29,12 @@ const purchasing001_1 = (props) => {
 
     return (
         <StyledWrapper>
-            <div className="loca-date">
+            {/* <div className="loca-date">
                 เอกสารที่ :  <Input style={{ width: '100px' }}></Input>
             </div>
             <div className="loca-date">
                 ลงวันที่ : &nbsp;&nbsp;&nbsp;<Input style={{ width: '100px' }}></Input>
-            </div>
+            </div> */}
 
             <Row gutter={[16, 48]} align='middle' type="flex" justify="space-between">
                 <Col span={2}><div className="gutter-box">ลำดับ</div></Col>
