@@ -8,6 +8,7 @@ const StyledWrapper = styled.div`
     height:70px;
     background-color:white;
     box-shadow: 0 4px 6px 0 rgba(0,0,0,.15);
+    border-bottom: 1.5px solid #2DAAE1;
 h3 {
     margin: 0;
     color:black;

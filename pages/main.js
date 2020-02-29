@@ -6,7 +6,8 @@ import Footer from '../src/components/Footer'
 import Header from '../src/components/Header'
 import Contents from '../src/components/Contents'
 const StyledWrapper = styled.div`
-
+height:100%;
+//background-color:pink;
 `
 const main = () => {
     return (
