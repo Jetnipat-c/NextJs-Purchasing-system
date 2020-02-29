@@ -5,16 +5,20 @@ import 'antd/dist/antd.css'
 import Router from 'next/router'
 const StyledWrapper = styled.div`
     display:flex;
+    flex-direction: row;
+    margin: 10em 0 10em 0;
     width:100%;
-    height:620px;
-    background-color:black;
+    height:100%;
+    justify-content: space-around;
+    background-color:white;
 .box1{
     display:flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    height:620px;
-    width: 570px;
+    //height:620px;
+    min-height: 1em;
+      justify-content: space-between;
     background-color:white;
 }
 .box2{
@@ -22,8 +26,9 @@ const StyledWrapper = styled.div`
     flex-direction: column; 
    justify-content: center;
    align-items: center;
-    height:100%;
-    width: 570px;
+    //height:100%;
+    min-height: 1em;
+      justify-content: space-between;
     background-color:white;
 }
 .box3{
@@ -31,8 +36,9 @@ const StyledWrapper = styled.div`
     flex-direction: column; 
    justify-content: center;
    align-items: center;
-    height:100%;
-    width: 570px;
+    //height:100%;
+    min-height: 1em;
+      justify-content: space-between;
     background-color:white;
 }
 h3 {
@@ -40,10 +46,10 @@ h3 {
     font-size: 30px;
 }
 h4 {
-    padding: 5px 0 0 0px;
+    padding: 5px 0 0 0em;
     text-align: left;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 100%;
 }
 `
 

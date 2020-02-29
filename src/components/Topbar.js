@@ -22,7 +22,7 @@ const StyledWrapper = styled.div`
 h3 {
     margin: 0;
     color:white;
-    font-size:1vw;
+    font-size:100%;
 }
 `
 const TopBar = () => {

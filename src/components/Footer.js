@@ -4,7 +4,7 @@ import 'antd/dist/antd.css'
 const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
-    
+    justify-content: end;
     min-height:108px;
     background-color:#143C6D;
     box-shadow: 0 4px 6px 0 rgba(0,0,0,.15);
@@ -18,10 +18,7 @@ const StyledWrapper = styled.div`
 const Footer = () => {
     return (
         <StyledWrapper>
-            <div className="copyr">
                <h3>Copyright © 2020 - 9999 CoE ระบบจัดซื้อ (Purchasing system) </h3>
-               <h3>แจ้งปัญหาการใช้งาน โทรศัพท์ xxxxxxxxxxxx หรือ xxxxxxxxxxxxxxxxxxxxx</h3> 
-               </div>
         </StyledWrapper>
     )
 }
