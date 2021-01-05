@@ -15,7 +15,7 @@
     "@react-pdf/renderer": "^1.6.8",
     "@zeit/next-css": "^1.0.1",
     "antd": "^3.26.6",
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "jspdf": "^1.5.3",
     "mariadb": "^2.1.5",
     "next": "^9.1.7",
